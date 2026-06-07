@@ -12,6 +12,7 @@
             margin: 0 auto;
         }
 
+        /* PC və Planşetlər üçün Grid düzülüşü */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -22,7 +23,7 @@
         .service-card {
             background: #ffffff;
             border-radius: 16px;
-            padding: 30px;
+            overflow: hidden; /* Şəklin kənarlarını kartın ovalına uyğun kəsir */
             box-shadow: 0 10px 30px rgba(0,0,0,0.04);
             border: 1px solid #ededed;
             display: flex;
@@ -37,7 +38,28 @@
             border-color: var(--primary, #ff4081);
         }
 
+        /* Kloun şousu üçün şəkil sahəsi */
+        .service-img-wrapper {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            background: #f1f1f1;
+        }
+
+        .service-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .service-card:hover .service-img-wrapper img {
+            transform: scale(1.06);
+        }
+
+        /* Mətn sahəsi - həm şəkilli, həm şəkilsiz kartlarda padding eyni qalır */
         .service-details {
+            padding: 30px;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
@@ -53,7 +75,6 @@
             padding-bottom: 10px;
         }
 
-        /* Başlığın altına kiçik dekorativ xətt */
         .service-details h3::after {
             content: '';
             position: absolute;
@@ -94,6 +115,33 @@
             display: inline-block !important;
             transform: none !important;
             writing-mode: horizontal-tb !important;
+        }
+
+        /* 📱 MOBİL TELEFONLAR ÜÇÜN RESPONSİV AYARLAR */
+        @media (max-width: 600px) {
+            .services-container {
+                padding: 40px 5%; /* Mobil ekranlarda kənar boşluqları optimallaşdırır */
+            }
+            .services-grid {
+                grid-template-columns: 1fr; /* Şəkillər və kartlar alt-alta tək sıralanır */
+                gap: 20px;
+            }
+            .service-card {
+                padding: 0px; /* Daxili padding sıfırlanır ki şəkil kənarlara tam otursun */
+            }
+            .service-img-wrapper {
+                height: 180px; /* Kiçik ekranlarda şəkil hündürlüyü daralır */
+            }
+            .service-details {
+                padding: 20px; /* Mobildə mətn sahəsi daha yığcam olur */
+            }
+            .service-details h3 {
+                font-size: 20px;
+            }
+            .service-details p {
+                font-size: 14px;
+                margin: 15px 0 20px 0;
+            }
         }
     </style>
 </head>
@@ -140,6 +188,9 @@
             </div>
 
             <div class="service-card">
+                <div class="service-img-wrapper">
+                    <img src="images/img11.jpg" loading="lazy" alt="Pozitiv Klounlar Şousu">
+                </div>
                 <div class="service-details">
                     <div>
                         <h3>Kloun Sou</h3>
