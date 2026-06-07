@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | Kids Show</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .faq-container { padding: 60px 8%; max-width: 800px; margin: 0 auto; }
+        .faq-item { background: var(--bg-light); border-radius: 12px; margin-bottom: 15px; overflow: hidden; border: 1px solid #eee; }
+        .faq-header { padding: 20px; font-weight: 600; font-size: 17px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: white; transition: 0.3s; }
+        .faq-header:hover { color: var(--primary); }
+        .faq-body { padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; color: var(--text-light); font-size: 15px; }
+        .faq-item.active .faq-body { padding: 20px; max-height: 200px; border-top: 1px solid #eee; }
+        .faq-icon::before { content: '+'; font-size: 20px; font-weight: bold; }
+        .faq-item.active .faq-icon::before { content: '−'; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Kids <span>Show</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Ana Səhifə</a></li>
+                <li><a href="about.html">Haqqımızda</a></li>
+                <li><a href="services.html">Xidmətlər</a></li>
+                <li><a href="gallery.html">Qalereya</a></li>
+                <li><a href="faq.html" class="active">FAQ</a></li>
+                <li><a href="contact.html" class="nav-cta">Əlaqə</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="faq-container">
+        <h2 class="section-title">Tez-Tez Soruşulan Suallar</h2>
+
+        <div class="faq-item">
+            <div class="faq-header" onclick="toggleFaq(this)">Şou proqramları üçün sifarişi nə qədər əvvəl etməliyik? <span class="faq-icon"></span></div>
+            <div class="faq-body">Tədbirin planlaşdırılan tarixdən ən azı 1-2 həftə əvvəl sifariş edilməsi tövsiyə olunur ki, istədiyiniz personaj və saat boş qalsın.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-header" onclick="toggleFaq(this)">LED Robot şousu neçə dəqiqə davam edir? <span class="faq-icon"></span></div>
+            <div class="faq-body">LED Robot proqramlarımız adətən uşaqların aktiv rəqsləri və foto-sessiyası daxil olmaqla 20-30 dəqiqə arası davam edir.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-header" onclick="toggleFaq(this)">Kostyumlarınız və materiallarınız təhlükəsizdirmi? <span class="faq-icon"></span></div>
+            <div class="faq-body">Bəli, bütün kostyumlarımız tam gigiyenik standartlara uyğundur, hər şoudan əvvəl təmizlənir və uşaqlar üçün 100% təhlükəsizdir.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-header" onclick="toggleFaq(this)">Rayonlara sifariş qəbul edirsiniz? <span class="faq-icon"></span></div>
+            <div class="faq-body">Bəli, Bakı və Abşeron ərazisindən əlavə, yol xərcləri hesablanmaqla Azərbaycanın digər rayonlarına da premium tədbirlər təşkil edirik.</div>
+        </div>
+    </div>
+
+    <script>
+        function toggleFaq(element) {
+            element.parentElement.classList.toggle('active');
+        }
+    </script>
+
+    <a href="https://wa.me/994500000000" class="whatsapp-float" target="_blank">➔</a>
+</body>
+</html>
