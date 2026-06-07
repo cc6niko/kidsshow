@@ -43,20 +43,20 @@
             box-shadow: 0 15px 35px rgba(0,0,0,0.1);
         }
 
-        .contact-icon {
-            font-size: 35px;
-            width: 60px;
-            height: 60px;
+        /* Loqo Sahəsi */
+        .contact-icon-wrapper {
+            width: 50px;
+            height: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 50%;
+            flex-shrink: 0;
         }
 
-        /* Sosial Şəbəkələrin Rəngləri */
-        .wp-card .contact-icon { background: #e8f5e9; color: #25D366; }
-        .insta-card .contact-icon { background: #fce4ec; color: #E1306C; }
-        .tiktok-card .contact-icon { background: #eceff1; color: #000000; }
+        .contact-icon-wrapper svg {
+            width: 100%;
+            height: 100%;
+        }
 
         .card-details h3 {
             margin: 0 0 5px 0;
@@ -100,24 +100,46 @@
 
         <div class="contact-grid">
             
-            <a href="https://wa.me/994773282029" target="_blank" class="contact-card wp-card">
-                <div class="contact-icon">💬</div>
+            <a href="https://wa.me/994773282029" target="_blank" class="contact-card">
+                <div class="contact-icon-wrapper">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.004 2C6.48 2 2 6.48 2 12.004c0 1.848.502 3.578 1.377 5.066l-1.353 4.935 5.053-1.326a9.947 9.947 0 004.927 1.321c5.523 0 10.003-4.48 10.003-10.004C22.007 6.48 17.527 2 12.004 2z" fill="#25D366"/>
+                        <path d="M16.942 14.82c-.27-.135-1.594-.786-1.841-.876-.248-.09-.428-.135-.608.135-.18.27-.698.876-.855 1.056-.158.18-.315.203-.585.068a7.37 7.37 0 01-2.172-1.34 8.125 8.125 0 01-1.503-1.87c-.157-.27-.017-.417.118-.552.122-.122.27-.315.405-.473.135-.157.18-.27.27-.45.09-.18.045-.337-.023-.472-.067-.135-.607-1.463-.832-2.003-.22-.529-.44-.457-.607-.466-.157-.008-.337-.008-.517-.008a.995.995 0 00-.72.338c-.248.27-.946.923-.946 2.25 0 1.328.968 2.61 1.103 2.79.135.18 1.905 2.91 4.616 4.082.645.278 1.148.445 1.54.57.648.206 1.238.177 1.704.107.519-.078 1.594-.652 1.819-1.282.225-.63.225-1.17.157-1.283-.067-.112-.247-.18-.517-.315z" fill="#FFF"/>
+                    </svg>
+                </div>
                 <div class="card-details">
                     <h3>WhatsApp</h3>
                     <p>+994 (77) 328-20-29</p>
                 </div>
             </a>
 
-            <a href="https://www.instagram.com/_.kids.show._?igsh=MWF3dDd5bzZmcnJxOQ==" target="_blank" class="contact-card insta-card">
-                <div class="contact-icon">📸</div>
+            <a href="https://www.instagram.com/_.kids.show._?igsh=MWF3dDd5bzZmcnJxOQ==" target="_blank" class="contact-card">
+                <div class="contact-icon-wrapper">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <radialGradient id="rg" cx="30%" cy="107%" r="130%">
+                            <stop offset="0%" stop-color="#fdf497" />
+                            <stop offset="5%" stop-color="#fdf497" />
+                            <stop offset="45%" stop-color="#fd5949" />
+                            <stop offset="60%" stop-color="#d6249f" />
+                            <stop offset="100%" stop-color="#285AEB" />
+                        </radialGradient>
+                        <rect width="24" height="24" rx="5" fill="url(#rg)"/>
+                        <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8.2c-1.76 0-3.2-1.44-3.2-3.2 0-1.76 1.44-3.2 3.2-3.2s3.2 1.44 3.2 3.2c0 1.76-1.44 3.2-3.2 3.2z" fill="#FFF"/>
+                        <circle cx="17.5" cy="6.5" r="1.1" fill="#FFF"/>
+                    </svg>
+                </div>
                 <div class="card-details">
                     <h3>Instagram</h3>
                     <p>@_.kids.show._</p>
                 </div>
             </a>
 
-            <a href="https://www.tiktok.com/@_hiss.elemirem_?_r=1&_t=ZS-970ieKTy6AK" target="_blank" class="contact-card tiktok-card">
-                <div class="contact-icon">🎵</div>
+            <a href="https://www.tiktok.com/@_hiss.elemirem_?_r=1&_t=ZS-970ieKTy6AK" target="_blank" class="contact-card">
+                <div class="contact-icon-wrapper">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm4.35 8.13a4.29 4.29 0 01-2.52-.83v4.11a3.43 3.43 0 11-3.43-3.43 3.32 3.32 0 01.73.08v2.09a1.35 1.35 0 10-.73 2.61 1.37 1.37 0 001.37-1.37V6.14h2.06a4.29 4.29 0 003.11 3.2z" fill="#000000"/>
+                    </svg>
+                </div>
                 <div class="card-details">
                     <h3>TikTok</h3>
                     <p>@_hiss.elemirem_</p>
