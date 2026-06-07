@@ -8,7 +8,7 @@
     <style>
         .gallery-container { padding: 60px 8%; }
         
-        /* Masonry Grid */
+        /* Masonry Grid (Müasir Şəkil Düzülüşü) */
         .masonry-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -21,7 +21,7 @@
             position: relative; 
             cursor: pointer; 
             box-shadow: 0 5px 15px rgba(0,0,0,0.08); 
-            background: #f1f1f1; /* Şəkil yüklənənə qədər gözəl fon */
+            background: #f1f1f1;
         }
         .masonry-item img { 
             width: 100%; 
@@ -33,11 +33,11 @@
             transform: scale(1.08); 
         }
         
-        /* Ölçü Variasiyaları (Masonry effekti) */
+        /* Dizayna fərqlilik qatan böyük və uzun kartlar */
         .masonry-item.tall { grid-row: span 2; }
         .masonry-item.wide { grid-column: span 2; }
 
-        /* Lightbox Modalı */
+        /* Lightbox Modalı (Şəkil böyüdücü panel) */
         .lightbox { 
             display: none; 
             position: fixed; 
@@ -90,42 +90,42 @@
         <h2 class="section-title">Bizim Tədbirlər</h2>
         
         <div class="masonry-grid">
-            <div class="masonry-item tall" onclick="openLightbox('https://hizliresim.com/78vlotw')">
-                <img src="https://hizliresim.com/78vlotw" referrerpolicy="no-referrer" loading="lazy">
+            <div class="masonry-item tall" onclick="openLightbox('images/img1.jpg')">
+                <img src="images/img1.jpg" loading="lazy" alt="Kids Show">
             </div>
-            <div class="masonry-item" onclick="openLightbox('https://hizliresim.com/mvephj6')">
-                <img src="https://hizliresim.com/mvephj6" referrerpolicy="no-referrer" loading="lazy">
+            <div class="masonry-item" onclick="openLightbox('images/img2.jpg')">
+                <img src="images/img2.jpg" loading="lazy" alt="Kids Show">
             </div>
-            <div class="masonry-item wide" onclick="openLightbox('https://hizliresim.com/tludgzm')">
-                <img src="https://hizliresim.com/tludgzm" referrerpolicy="no-referrer" loading="lazy">
+            <div class="masonry-item wide" onclick="openLightbox('images/img3.jpg')">
+                <img src="images/img3.jpg" loading="lazy" alt="Kids Show">
             </div>
-            <div class="masonry-item" onclick="openLightbox('https://hizliresim.com/cisfe98')">
-                <img src="https://hizliresim.com/cisfe98" referrerpolicy="no-referrer" loading="lazy">
+            <div class="masonry-item" onclick="openLightbox('images/img4.jpg')">
+                <img src="images/img4.jpg" loading="lazy" alt="Kids Show">
             </div>
-            <div class="masonry-item tall" onclick="openLightbox('https://hizliresim.com/lwmrnpn')">
-                <img src="https://hizliresim.com/lwmrnpn" referrerpolicy="no-referrer" loading="lazy">
+            <div class="masonry-item tall" onclick="openLightbox('images/img5.jpg')">
+                <img src="images/img5.jpg" loading="lazy" alt="Kids Show">
             </div>
-            <div class="masonry-item" onclick="openLightbox('https://hizliresim.com/jelkjxa')">
-                <img src="https://hizliresim.com/jelkjxa" referrerpolicy="no-referrer" loading="lazy">
+            <div class="masonry-item" onclick="openLightbox('images/img6.jpg')">
+                <img src="images/img6.jpg" loading="lazy" alt="Kids Show">
             </div>
-            <div class="masonry-item wide" onclick="openLightbox('https://hizliresim.com/ecc94fi')">
-                <img src="https://hizliresim.com/ecc94fi" referrerpolicy="no-referrer" loading="lazy">
+            <div class="masonry-item wide" onclick="openLightbox('images/img7.jpg')">
+                <img src="images/img7.jpg" loading="lazy" alt="Kids Show">
             </div>
-            <div class="masonry-item" onclick="openLightbox('https://hizliresim.com/m5hsrjw')">
-                <img src="https://hizliresim.com/m5hsrjw" referrerpolicy="no-referrer" loading="lazy">
+            <div class="masonry-item" onclick="openLightbox('images/img8.jpg')">
+                <img src="images/img8.jpg" loading="lazy" alt="Kids Show">
             </div>
-            <div class="masonry-item" onclick="openLightbox('https://hizliresim.com/na5zynu')">
-                <img src="https://hizliresim.com/na5zynu" referrerpolicy="no-referrer" loading="lazy">
+            <div class="masonry-item" onclick="openLightbox('images/img9.jpg')">
+                <img src="images/img9.jpg" loading="lazy" alt="Kids Show">
             </div>
-            <div class="masonry-item" onclick="openLightbox('https://hizliresim.com/n4bx5qm')">
-                <img src="https://hizliresim.com/n4bx5qm" referrerpolicy="no-referrer" loading="lazy">
+            <div class="masonry-item" onclick="openLightbox('images/img10.jpg')">
+                <img src="images/img10.jpg" loading="lazy" alt="Kids Show">
             </div>
         </div>
     </div>
 
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <span class="lightbox-close">×</span>
-        <img id="lightbox-img" src="" referrerpolicy="no-referrer">
+        <img id="lightbox-img" src="" alt="Böyük Şəkil">
     </div>
 
     <script>
