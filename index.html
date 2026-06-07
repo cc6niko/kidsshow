@@ -9,7 +9,8 @@
         /* Hero Section */
         .hero {
             height: calc(100vh - 80px);
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://hizliresim.com/78vlotw') center/cover no-repeat;
+            /* Yeni istədiyiniz şəkil arxa plana əlavə olundu */
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://hizliresim.com/m5hsrjw') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -51,11 +52,17 @@
             color: var(--text-light);
             font-weight: 500;
         }
+        
+        /* Əlaqə düyməsinin tərs durma probleminin qarşısını alan əlavə */
+        .nav-cta {
+            display: inline-block !important;
+            transform: none !important;
+            writing-mode: horizontal-tb !important;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Header / Naviqasiya -->
     <header>
         <div class="logo">Kids <span>Show</span></div>
         <nav>
@@ -70,7 +77,6 @@
         </nav>
     </header>
 
-    <!-- Hero Bölümü -->
     <section class="hero">
         <div class="hero-content">
             <h1>Uşaqlar Üçün Unudulmaz Anlar Yaradırıq</h1>
@@ -82,7 +88,6 @@
         </div>
     </section>
 
-    <!-- Animasiyalı Statistika Bölümü -->
     <section class="stats">
         <div class="stat-item">
             <h3>500+</h3>
@@ -102,10 +107,8 @@
         </div>
     </section>
 
-    <!-- Üzən WhatsApp Düyməsi -->
     <a href="https://wa.me/994500000000" class="whatsapp-float" target="_blank">➔</a>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-grid">
             <div class="footer-col">
