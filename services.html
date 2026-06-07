@@ -25,6 +25,9 @@
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             border: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
@@ -33,7 +36,6 @@
             box-shadow: 0 15px 35px rgba(0,0,0,0.1);
         }
 
-        /* Xidmət Şəkilləri Sahəsi */
         .service-img-wrapper {
             width: 100%;
             height: 220px;
@@ -54,6 +56,10 @@
 
         .service-details {
             padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .service-details h3 {
@@ -79,14 +85,15 @@
             border-radius: 8px;
             font-weight: 600;
             font-size: 14px;
+            text-align: center;
             transition: opacity 0.3s;
+            margin-top: auto;
         }
 
         .service-btn:hover {
             opacity: 0.9;
         }
 
-        /* Naviqasiya düyməsi düzəlişi */
         .nav-cta {
             display: inline-block !important;
             transform: none !important;
@@ -112,7 +119,7 @@
 
     <div class="services-container">
         <h2 class="section-title">Bizim Xidmətlər</h2>
-        <p style="text-align: center; color: #666; margin-top: -10px; margin-bottom: 20px;">Uşaqlarınız üçün ən premium şou və əyləncə proqramlarını təklif edirik.</p>
+        <p style="text-align: center; color: #666; margin-top: -10px; margin-bottom: 20px;">Uşaqlarınız üçün təşkil etdiyimiz bütün premium şou və proqramların siyahısı.</p>
 
         <div class="services-grid">
 
@@ -121,30 +128,75 @@
                     <img src="images/img11.jpg" loading="lazy" alt="LED Robot Şou">
                 </div>
                 <div class="service-details">
-                    <h3>LED Robot Şou</h3>
-                    <p>Yüksək texnologiyalı, işıqlı və nəhəng LED robotlarımızın möhtəşəm rəqs şousu uşaqların və böyüklərin diqqətini tam cəlb edəcək.</p>
+                    <div>
+                        <h3>LED Robot Şou</h3>
+                        <p>Yüksək texnologiyalı, xüsusi işıq effektləri ilə təchiz olunmuş nəhəng LED robotlarımızın fantastik və enerjili rəqs şousu.</p>
+                    </div>
                     <a href="contact.html" class="service-btn">Sifariş Et</a>
                 </div>
             </div>
 
             <div class="service-card">
                 <div class="service-img-wrapper">
-                    <img src="images/img12.jpg" loading="lazy" alt="Peşəkar Animatorlar">
+                    <img src="images/img12.jpg" loading="lazy" alt="Animatorlar və Klounlar">
                 </div>
                 <div class="service-details">
-                    <h3>Peşəkar Animatorlar</h3>
-                    <p>Uşaqların ən sevdiyi cizgi filmi və nağıl qəhrəmanları xüsusi oyunlar, yarışlar və rəngarəng proqramlarla tədbirə neqativsiz enerji qatır.</p>
+                    <div>
+                        <h3>Animatorlar və Klounlar</h3>
+                        <p>Uşaqların sevimli nağıl/cizgi filmi qəhrəmanları və gülməli, pozitiv klounlar xüsusi interaktiv oyunlar və proqramlarla xidmətinizdədir.</p>
+                    </div>
                     <a href="contact.html" class="service-btn">Sifariş Et</a>
                 </div>
             </div>
 
             <div class="service-card">
                 <div class="service-img-wrapper">
-                    <img src="images/img13.jpg" loading="lazy" alt="Tematik Ad Günləri">
+                    <img src="images/img13.jpg" loading="lazy" alt="Şişmə Personajlar">
                 </div>
                 <div class="service-details">
-                    <h3>Şou Proqramlar</h3>
-                    <p>Sehrbaz, köpük şousu, kağız şousu və uşaqlar üçün unudulmaz sürprizlərlə dolu master-klasslar və əyləncəli dəqiqələr.</p>
+                    <div>
+                        <h3>Şişmə Personajlar</h3>
+                        <p>Böyük ölçülü, sevimli və uşaqların qucaqlamaqdan doymadığı nəhəng şişmə maskot personajlar tədbirə xüsusi rəng qatır.</p>
+                    </div>
+                    <a href="contact.html" class="service-btn">Sifariş Et</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-img-wrapper">
+                    <img src="images/img3.jpg" loading="lazy" alt="Ad Günləri">
+                </div>
+                <div class="service-details">
+                    <div>
+                        <h3>Ad Günləri və Özəl Günlər</h3>
+                        <p>Övladınızın ən xüsusi gününü unudulmaz nağıla çevirmək üçün konseptual ad günlərinin peşəkar şəkildə təşkili.</p>
+                    </div>
+                    <a href="contact.html" class="service-btn">Sifariş Et</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-img-wrapper">
+                    <img src="images/img5.jpg" loading="lazy" alt="Məktəb və Bağça Tədbirləri">
+                </div>
+                <div class="service-details">
+                    <div>
+                        <h3>Məktəb və Bağça Tədbirləri</h3>
+                        <p>Bağçalar və məktəblər üçün kütləvi, əyləncəli, həm də öyrədici xüsusi qrup proqramları, diskotekalar və yarışlar.</p>
+                    </div>
+                    <a href="contact.html" class="service-btn">Sifariş Et</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-img-wrapper">
+                    <img src="images/img7.jpg" loading="lazy" alt="Xüsusi Şou proqramlar">
+                </div>
+                <div class="service-details">
+                    <div>
+                        <h3>Xüsusi Şou Proqramlar</h3>
+                        <p>Heyrətamiz sehrbaz şouları, nəhəng sabun köpüyü şousu, kağız şouları və uşaqların sevdiyi digər sürpriz master-klasslar.</p>
+                    </div>
                     <a href="contact.html" class="service-btn">Sifariş Et</a>
                 </div>
             </div>
