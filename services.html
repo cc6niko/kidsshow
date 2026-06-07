@@ -23,7 +23,7 @@
         .service-card {
             background: #ffffff;
             border-radius: 16px;
-            overflow: hidden; /* Şəklin kənarlarını kartın ovalına uyğun kəsir */
+            overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.04);
             border: 1px solid #ededed;
             display: flex;
@@ -57,7 +57,7 @@
             transform: scale(1.06);
         }
 
-        /* Mətn sahəsi - həm şəkilli, həm şəkilsiz kartlarda padding eyni qalır */
+        /* Mətn sahəsi */
         .service-details {
             padding: 30px;
             flex-grow: 1;
@@ -120,20 +120,20 @@
         /* 📱 MOBİL TELEFONLAR ÜÇÜN RESPONSİV AYARLAR */
         @media (max-width: 600px) {
             .services-container {
-                padding: 40px 5%; /* Mobil ekranlarda kənar boşluqları optimallaşdırır */
+                padding: 40px 5%;
             }
             .services-grid {
-                grid-template-columns: 1fr; /* Şəkillər və kartlar alt-alta tək sıralanır */
+                grid-template-columns: 1fr;
                 gap: 20px;
             }
             .service-card {
-                padding: 0px; /* Daxili padding sıfırlanır ki şəkil kənarlara tam otursun */
+                padding: 0px;
             }
             .service-img-wrapper {
-                height: 180px; /* Kiçik ekranlarda şəkil hündürlüyü daralır */
+                height: 180px;
             }
             .service-details {
-                padding: 20px; /* Mobildə mətn sahəsi daha yığcam olur */
+                padding: 20px;
             }
             .service-details h3 {
                 font-size: 20px;
@@ -189,11 +189,11 @@
 
             <div class="service-card">
                 <div class="service-img-wrapper">
-                    <img src="images/img11.jpg" loading="lazy" alt="Pozitiv Klounlar Şousu">
+                    <img src="images/img11.jpeg" loading="lazy" alt="Pozitiv Klounlar Şousu">
                 </div>
                 <div class="service-details">
                     <div>
-                        <h3>Kloun Sou</h3>
+                        <h3>Pozitiv Klounlar</h3>
                         <p>Gülməli, mehriban və uşaqlarla dərhal dil tapan peşəkar klounlarımızın hazırladığı xüsusi zarafatlar, şən professional şoular.</p>
                     </div>
                     <a href="contact.html" class="service-btn">Sifariş Et</a>
