@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Əlaqə | Kids Show</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-container {
+            padding: 60px 8%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        /* Sosial Media və Əlaqə Kartları */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-card {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .contact-icon {
+            font-size: 35px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        /* Sosial Şbəkələrin Rəngləri */
+        .wp-card .contact-icon { background: #e8f5e9; color: #25D366; }
+        .insta-card .contact-icon { background: #fce4ec; color: #E1306C; }
+        .tiktok-card .contact-icon { background: #eceff1; color: #000000; }
+
+        .card-details h3 {
+            margin: 0 0 5px 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .card-details p {
+            margin: 0;
+            font-size: 15px;
+            color: #666;
+        }
+
+        /* Əlaqə Formu */
+        .contact-form-wrapper {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            border: 1px solid #f0f0f0;
+        }
+
+        .contact-form-wrapper h3 {
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-size: 22px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #555;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: var(--primary, #ff4081);
+            outline: none;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #ff4081, #9c27b0);
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            transition: opacity 0.3s;
+        }
+
+        .submit-btn:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Kids <span>Show</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Ana Səhifə</a></li>
+                <li><a href="about.html">Haqqımızda</a></li>
+                <li><a href="services.html">Xidmətlər</a></li>
+                <li><a href="gallery.html">Qalereya</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html" class="nav-cta active">Əlaqə</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contact-container">
+        <h2 class="section-title">Bizimlə Əlaqə</h2>
+        <p style="text-align: center; color: #666; margin-top: -10px; margin-bottom: 40px;">Hər hansı bir sualınız var və ya sifariş vermək istəyirsiniz? Bizə yazın!</p>
+
+        <div class="contact-grid">
+            
+            <div class="contact-info">
+                
+                <a href="https://wa.me/994773282029" target="_blank" class="contact-card wp-card">
+                    <div class="contact-icon">💬</div>
+                    <div class="card-details">
+                        <h3>WhatsApp</h3>
+                        <p>+994 (77) 328-20-29</p>
+                    </div>
+                </a>
+
+                <a href="https://www.instagram.com/_.kids.show._?igsh=MWF3dDd5bzZmcnJxOQ==" target="_blank" class="contact-card insta-card">
+                    <div class="contact-icon">📸</div>
+                    <div class="card-details">
+                        <h3>Instagram</h3>
+                        <p>@_.kids.show._</p>
+                    </div>
+                </a>
+
+                <a href="https://www.tiktok.com/@_hiss.elemirem_?_r=1&_t=ZS-970ieKTy6AK" target="_blank" class="contact-card tiktok-card">
+                    <div class="contact-icon">🎵</div>
+                    <div class="card-details">
+                        <h3>TikTok</h3>
+                        <p>@_hiss.elemirem_</p>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="contact-form-wrapper">
+                <h3>Bizə Mesaj Göndərin</h3>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Adınız və Soyadınız</label>
+                        <input type="text" id="name" required placeholder="Nümunə: Əli Məmmədov">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefon Nömrəniz</label>
+                        <input type="tel" id="phone" required placeholder="Nümunə: 050 123 45 67">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Qeydiniz / Sifariş Detalları</label>
+                        <textarea id="message" rows="4" required placeholder="Tədbirin növü, tarixi və istədiyiniz personajlar barədə qısa məlumat yazın..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Mesajı Göndər</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <a href="https://wa.me/994773282029" class="whatsapp-float" target="_blank">➔</a>
+
+</body>
+</html>
