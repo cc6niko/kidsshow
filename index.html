@@ -9,8 +9,8 @@
         /* Hero Section */
         .hero {
             height: calc(100vh - 80px);
-            /* Şəkil keçidi yeniləndi və bura birbaşa tətbiq olundu */
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://hizliresim.com/m5hsrjw') center/cover no-repeat;
+            /* Arxa plan şəkli sizin images qovluğundan img1.jpg olaraq oxunur */
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('images/img1.jpg') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -21,7 +21,7 @@
         }
         .hero-content {
             position: relative;
-            z-index: 2; /* Mətnlərin və düymələrin şəklin üstündə qalması üçün */
+            z-index: 2;
         }
         .hero-content h1 {
             font-size: 48px;
@@ -59,22 +59,15 @@
             font-weight: 500;
         }
         
-        /* Naviqasiya düyməsi düzəlişi */
+        /* Əlaqə düyməsinin düzgün durması üçün CSS sığortası */
         .nav-cta {
             display: inline-block !important;
             transform: none !important;
             writing-mode: horizontal-tb !important;
         }
-
-        /* Təhlükəsizlik blokunu aşmaq üçün gizli şəkil yükləyici */
-        .hidden-preloader {
-            display: none;
-        }
     </style>
 </head>
 <body>
-
-    <img src="https://hizliresim.com/m5hsrjw" referrerpolicy="no-referrer" class="hidden-preloader" alt="preloader">
 
     <header>
         <div class="logo">Kids <span>Show</span></div>
