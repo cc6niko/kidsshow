@@ -14,17 +14,17 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
             margin-top: 40px;
         }
 
         .service-card {
             background: #ffffff;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border: 1px solid #f0f0f0;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            border: 1px solid #ededed;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -33,29 +33,11 @@
 
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-        }
-
-        .service-img-wrapper {
-            width: 100%;
-            height: 220px;
-            overflow: hidden;
-            background: #f1f1f1;
-        }
-
-        .service-img-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .service-card:hover .service-img-wrapper img {
-            transform: scale(1.06);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            border-color: var(--primary, #ff4081);
         }
 
         .service-details {
-            padding: 25px;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
@@ -63,14 +45,28 @@
         }
 
         .service-details h3 {
-            margin: 0 0 12px 0;
-            font-size: 22px;
-            color: #333;
+            margin: 0 0 15px 0;
+            font-size: 24px;
+            color: #222;
             font-weight: 700;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        /* Başlığın altına kiçik dekorativ xətt */
+        .service-details h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: linear-gradient(135deg, #ff4081, #9c27b0);
+            border-radius: 2px;
         }
 
         .service-details p {
-            margin: 0 0 20px 0;
+            margin: 20px 0 25px 0;
             font-size: 15px;
             color: #666;
             line-height: 1.6;
@@ -81,10 +77,10 @@
             background: linear-gradient(135deg, #ff4081, #9c27b0);
             color: white;
             text-decoration: none;
-            padding: 10px 22px;
+            padding: 12px 25px;
             border-radius: 8px;
             font-weight: 600;
-            font-size: 14px;
+            font-size: 15px;
             text-align: center;
             transition: opacity 0.3s;
             margin-top: auto;
@@ -119,14 +115,11 @@
 
     <div class="services-container">
         <h2 class="section-title">Bizim Xidmətlər</h2>
-        <p style="text-align: center; color: #666; margin-top: -10px; margin-bottom: 20px;">Uşaqlarınız üçün təşkil etdiyimiz bütün premium şou və proqramların siyahısı.</p>
+        <p style="text-align: center; color: #666; margin-top: -10px; margin-bottom: 20px;">Uşaqlarınız üçün təşkil etdiyimiz premium şou və əyləncə proqramları.</p>
 
         <div class="services-grid">
 
             <div class="service-card">
-                <div class="service-img-wrapper">
-                    <img src="images/img11.jpg" loading="lazy" alt="LED Robot Şou">
-                </div>
                 <div class="service-details">
                     <div>
                         <h3>LED Robot Şou</h3>
@@ -137,61 +130,56 @@
             </div>
 
             <div class="service-card">
-                <div class="service-img-wrapper">
-                    <img src="images/img12.jpg" loading="lazy" alt="Animatorlar və Klounlar">
-                </div>
                 <div class="service-details">
                     <div>
-                        <h3>Animatorlar və Klounlar</h3>
-                        <p>Uşaqların sevimli nağıl/cizgi filmi qəhrəmanları və gülməli, pozitiv klounlar xüsusi interaktiv oyunlar və proqramlarla xidmətinizdədir.</p>
+                        <h3>Peşəkar Animatorlar</h3>
+                        <p>Uşaqların ən sevdiyi müasir cizgi filmi və nağıl qəhrəmanları xüsusi interaktiv oyunlar, yarışlar və enerjili proqramlarla uşaqların xidmətindədir.</p>
                     </div>
                     <a href="contact.html" class="service-btn">Sifariş Et</a>
                 </div>
             </div>
 
             <div class="service-card">
-                <div class="service-img-wrapper">
-                    <img src="images/img13.jpg" loading="lazy" alt="Şişmə Personajlar">
+                <div class="service-details">
+                    <div>
+                        <h3>Pozitiv Klounlar</h3>
+                        <p>Gülməli, mehriban və uşaqlarla dərhal dil tapan peşəkar klounlarımızın hazırladığı xüsusi zarafatlar, şən professional şoular.</p>
+                    </div>
+                    <a href="contact.html" class="service-btn">Sifariş Et</a>
                 </div>
+            </div>
+
+            <div class="service-card">
                 <div class="service-details">
                     <div>
                         <h3>Şişmə Personajlar</h3>
-                        <p>Böyük ölçülü, sevimli və uşaqların qucaqlamaqdan doymadığı nəhəng şişmə maskot personajlar tədbirə xüsusi rəng qatır.</p>
+                        <p>Böyük ölçülü, sevimli və uşaqların qucaqlamaqdan, şəkil çəkdirməkdən doymadığı nəhəng şişmə maskot personajlar.</p>
                     </div>
                     <a href="contact.html" class="service-btn">Sifariş Et</a>
                 </div>
             </div>
 
             <div class="service-card">
-                <div class="service-img-wrapper">
-                    <img src="images/img3.jpg" loading="lazy" alt="Ad Günləri">
-                </div>
                 <div class="service-details">
                     <div>
-                        <h3>Ad Günləri və Özəl Günlər</h3>
-                        <p>Övladınızın ən xüsusi gününü unudulmaz nağıla çevirmək üçün konseptual ad günlərinin peşəkar şəkildə təşkili.</p>
+                        <h3>Ad Günləri</h3>
+                        <p>Övladınızın ən xüsusi gününü unudulmaz nağıla çevirmək üçün xüsusi konseptlərin və premium ad günlərinin peşəkar təşkili.</p>
                     </div>
                     <a href="contact.html" class="service-btn">Sifariş Et</a>
                 </div>
             </div>
 
             <div class="service-card">
-                <div class="service-img-wrapper">
-                    <img src="images/img5.jpg" loading="lazy" alt="Məktəb və Bağça Tədbirləri">
-                </div>
                 <div class="service-details">
                     <div>
                         <h3>Məktəb və Bağça Tədbirləri</h3>
-                        <p>Bağçalar və məktəblər üçün kütləvi, əyləncəli, həm də öyrədici xüsusi qrup proqramları, diskotekalar və yarışlar.</p>
+                        <p>Bağçalar və məktəblər üçün kütləvi, əyləncəli, həm də öyrədici xüsusi qrup proqramları, uşaq diskotekaları və yarışlar.</p>
                     </div>
                     <a href="contact.html" class="service-btn">Sifariş Et</a>
                 </div>
             </div>
 
             <div class="service-card">
-                <div class="service-img-wrapper">
-                    <img src="images/img7.jpg" loading="lazy" alt="Xüsusi Şou proqramlar">
-                </div>
                 <div class="service-details">
                     <div>
                         <h3>Xüsusi Şou Proqramlar</h3>
