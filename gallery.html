@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <style>
         .gallery-container { padding: 60px 8%; }
+        
         /* Masonry Grid */
         .masonry-grid {
             display: grid;
@@ -14,18 +15,55 @@
             grid-auto-rows: 250px;
             gap: 20px;
         }
-        .masonry-item { border-radius: 16px; overflow: hidden; position: relative; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
-        .masonry-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-        .masonry-item:hover img { transform: scale(1.08); }
+        .masonry-item { 
+            border-radius: 16px; 
+            overflow: hidden; 
+            position: relative; 
+            cursor: pointer; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08); 
+            background: #f1f1f1; /* Şəkil yüklənənə qədər gözəl fon */
+        }
+        .masonry-item img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            transition: transform 0.5s ease; 
+        }
+        .masonry-item:hover img { 
+            transform: scale(1.08); 
+        }
         
         /* Ölçü Variasiyaları (Masonry effekti) */
         .masonry-item.tall { grid-row: span 2; }
         .masonry-item.wide { grid-column: span 2; }
 
         /* Lightbox Modalı */
-        .lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 2000; align-items: center; justify-content: center; }
-        .lightbox img { max-width: 90%; max-height: 80%; border-radius: 8px; }
-        .lightbox-close { position: absolute; top: 30px; right: 40px; color: white; font-size: 40px; cursor: pointer; }
+        .lightbox { 
+            display: none; 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            background: rgba(0,0,0,0.9); 
+            z-index: 2000; 
+            align-items: center; 
+            justify-content: center; 
+        }
+        .lightbox img { 
+            max-width: 90%; 
+            max-height: 80%; 
+            border-radius: 8px; 
+            box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+        }
+        .lightbox-close { 
+            position: absolute; 
+            top: 30px; 
+            right: 40px; 
+            color: white; 
+            font-size: 40px; 
+            cursor: pointer; 
+        }
         
         @media (max-width: 768px) {
             .masonry-item.wide { grid-column: span 1; }
@@ -52,23 +90,42 @@
         <h2 class="section-title">Bizim Tədbirlər</h2>
         
         <div class="masonry-grid">
-            <div class="masonry-item tall" onclick="openLightbox('https://hizliresim.com/78vlotw')"><img src="https://hizliresim.com/78vlotw" loading="lazy"></div>
-            <div class="masonry-item" onclick="openLightbox('https://hizliresim.com/mvephj6')"><img src="https://hizliresim.com/mvephj6" loading="lazy"></div>
-            <div class="masonry-item wide" onclick="openLightbox('https://hizliresim.com/tludgzm')"><img src="https://hizliresim.com/tludgzm" loading="lazy"></div>
-            <div class="masonry-item" onclick="openLightbox('https://hizliresim.com/cisfe98')"><img src="https://hizliresim.com/cisfe98" loading="lazy"></div>
-            <div class="masonry-item tall" onclick="openLightbox('https://hizliresim.com/lwmrnpn')"><img src="https://hizliresim.com/lwmrnpn" loading="lazy"></div>
-            <div class="masonry-item" onclick="openLightbox('https://hizliresim.com/jelkjxa')"><img src="https://hizliresim.com/jelkjxa" loading="lazy"></div>
-            <div class="masonry-item wide" onclick="openLightbox('https://hizliresim.com/ecc94fi')"><img src="https://hizliresim.com/ecc94fi" loading="lazy"></div>
-            <div class="masonry-item" onclick="openLightbox('https://hizliresim.com/m5hsrjw')"><img src="https://hizliresim.com/m5hsrjw" loading="lazy"></div>
-            <div class="masonry-item" onclick="openLightbox('https://hizliresim.com/na5zynu')"><img src="https://hizliresim.com/na5zynu" loading="lazy"></div>
-            <div class="masonry-item" onclick="openLightbox('https://hizliresim.com/n4bx5qm')"><img src="https://hizliresim.com/n4bx5qm" loading="lazy"></div>
+            <div class="masonry-item tall" onclick="openLightbox('https://hizliresim.com/78vlotw')">
+                <img src="https://hizliresim.com/78vlotw" referrerpolicy="no-referrer" loading="lazy">
+            </div>
+            <div class="masonry-item" onclick="openLightbox('https://hizliresim.com/mvephj6')">
+                <img src="https://hizliresim.com/mvephj6" referrerpolicy="no-referrer" loading="lazy">
+            </div>
+            <div class="masonry-item wide" onclick="openLightbox('https://hizliresim.com/tludgzm')">
+                <img src="https://hizliresim.com/tludgzm" referrerpolicy="no-referrer" loading="lazy">
+            </div>
+            <div class="masonry-item" onclick="openLightbox('https://hizliresim.com/cisfe98')">
+                <img src="https://hizliresim.com/cisfe98" referrerpolicy="no-referrer" loading="lazy">
+            </div>
+            <div class="masonry-item tall" onclick="openLightbox('https://hizliresim.com/lwmrnpn')">
+                <img src="https://hizliresim.com/lwmrnpn" referrerpolicy="no-referrer" loading="lazy">
+            </div>
+            <div class="masonry-item" onclick="openLightbox('https://hizliresim.com/jelkjxa')">
+                <img src="https://hizliresim.com/jelkjxa" referrerpolicy="no-referrer" loading="lazy">
+            </div>
+            <div class="masonry-item wide" onclick="openLightbox('https://hizliresim.com/ecc94fi')">
+                <img src="https://hizliresim.com/ecc94fi" referrerpolicy="no-referrer" loading="lazy">
+            </div>
+            <div class="masonry-item" onclick="openLightbox('https://hizliresim.com/m5hsrjw')">
+                <img src="https://hizliresim.com/m5hsrjw" referrerpolicy="no-referrer" loading="lazy">
+            </div>
+            <div class="masonry-item" onclick="openLightbox('https://hizliresim.com/na5zynu')">
+                <img src="https://hizliresim.com/na5zynu" referrerpolicy="no-referrer" loading="lazy">
+            </div>
+            <div class="masonry-item" onclick="openLightbox('https://hizliresim.com/n4bx5qm')">
+                <img src="https://hizliresim.com/n4bx5qm" referrerpolicy="no-referrer" loading="lazy">
+            </div>
         </div>
     </div>
 
-    <!-- Lightbox Strukturu -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-        <span class="lightbox-close">&times;</span>
-        <img id="lightbox-img" src="">
+        <span class="lightbox-close">×</span>
+        <img id="lightbox-img" src="" referrerpolicy="no-referrer">
     </div>
 
     <script>
