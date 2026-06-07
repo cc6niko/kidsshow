@@ -3,18 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xidmətlərimiz | Kids Show</title>
+    <title>Xidmətlər | Kids Show</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .services-container { padding: 60px 8%; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 20px; }
-        .service-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.4s ease; border: 1px solid #f1f1f1; }
-        .service-card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(255, 62, 122, 0.15); }
-        .service-img { width: 100%; height: 250px; object-fit: cover; }
-        .service-info { padding: 25px; }
-        .service-info h3 { font-size: 22px; margin-bottom: 12px; color: var(--text-dark); }
-        .service-info p { color: var(--text-light); font-size: 15px; margin-bottom: 20px; }
-        .service-info .card-link { color: var(--primary); text-decoration: none; font-weight: 600; display: inline-block; }
+        .services-container {
+            padding: 60px 8%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid #f0f0f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        /* Xidmət Şəkilləri Sahəsi */
+        .service-img-wrapper {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            background: #f1f1f1;
+        }
+
+        .service-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .service-card:hover .service-img-wrapper img {
+            transform: scale(1.06);
+        }
+
+        .service-details {
+            padding: 25px;
+        }
+
+        .service-details h3 {
+            margin: 0 0 12px 0;
+            font-size: 22px;
+            color: #333;
+            font-weight: 700;
+        }
+
+        .service-details p {
+            margin: 0 0 20px 0;
+            font-size: 15px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .service-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff4081, #9c27b0);
+            color: white;
+            text-decoration: none;
+            padding: 10px 22px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: opacity 0.3s;
+        }
+
+        .service-btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Naviqasiya düyməsi düzəlişi */
+        .nav-cta {
+            display: inline-block !important;
+            transform: none !important;
+            writing-mode: horizontal-tb !important;
+        }
     </style>
 </head>
 <body>
@@ -34,75 +111,48 @@
     </header>
 
     <div class="services-container">
-        <h2 class="section-title">Xidmətlərimiz</h2>
+        <h2 class="section-title">Bizim Xidmətlər</h2>
+        <p style="text-align: center; color: #666; margin-top: -10px; margin-bottom: 20px;">Uşaqlarınız üçün ən premium şou və əyləncə proqramlarını təklif edirik.</p>
+
         <div class="services-grid">
 
             <div class="service-card">
-                <img class="service-img" src="https://hizliresim.com/mvephj6" alt="LED Robot Show">
-                <div class="service-info">
+                <div class="service-img-wrapper">
+                    <img src="images/img11.jpg" loading="lazy" alt="LED Robot Şou">
+                </div>
+                <div class="service-details">
                     <h3>LED Robot Şou</h3>
-                    <p>Neon işıqlar və möhtəşəm vizual performansla tədbirin zirvə nöqtəsi.</p>
-                    <a href="contact.html" class="card-link">Sifariş Et ➔</a>
+                    <p>Yüksək texnologiyalı, işıqlı və nəhəng LED robotlarımızın möhtəşəm rəqs şousu uşaqların və böyüklərin diqqətini tam cəlb edəcək.</p>
+                    <a href="contact.html" class="service-btn">Sifariş Et</a>
                 </div>
             </div>
 
             <div class="service-card">
-                <img class="service-img" src="https://hizliresim.com/tludgzm" alt="Clown Show">
-                <div class="service-info">
-                    <h3>Kloun Şou</h3>
-                    <p>Gülüş dolu anlar, interaktiv oyunlar və uşaqların sevimli zarafatları.</p>
-                    <a href="contact.html" class="card-link">Sifariş Et ➔</a>
+                <div class="service-img-wrapper">
+                    <img src="images/img12.jpg" loading="lazy" alt="Peşəkar Animatorlar">
+                </div>
+                <div class="service-details">
+                    <h3>Peşəkar Animatorlar</h3>
+                    <p>Uşaqların ən sevdiyi cizgi filmi və nağıl qəhrəmanları xüsusi oyunlar, yarışlar və rəngarəng proqramlarla tədbirə neqativsiz enerji qatır.</p>
+                    <a href="contact.html" class="service-btn">Sifariş Et</a>
                 </div>
             </div>
 
             <div class="service-card">
-                <img class="service-img" src="https://hizliresim.com/cisfe98" alt="Panda Character">
-                <div class="service-info">
-                    <h3>Şişme Personajlar</h3>
-                    <p>Sevimli, nəhəng və rəqs edən personajlar ilə unudulmaz qucaqlaşmalar və şəkillər.</p>
-                    <a href="contact.html" class="card-link">Sifariş Et ➔</a>
+                <div class="service-img-wrapper">
+                    <img src="images/img13.jpg" loading="lazy" alt="Tematik Ad Günləri">
                 </div>
-            </div>
-
-            <div class="service-card">
-                <img class="service-img" src="https://hizliresim.com/lwmrnpn" alt="Animators">
-                <div class="service-info">
-                    <h3>Animatorlar</h3>
-                    <p>Nağıl qəhrəmanları və super qəhrəmanlar uşaqlarınızın ad günündə.</p>
-                    <a href="contact.html" class="card-link">Sifariş Et ➔</a>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <img class="service-img" src="https://hizliresim.com/jelkjxa" alt="Birthday Parties">
-                <div class="service-info">
-                    <h3>Ad Günləri</h3>
-                    <p>Tam konseptual dizayn edilmiş, oyunlar və yarışmalarla zəngin ad günləri.</p>
-                    <a href="contact.html" class="card-link">Sifariş Et ➔</a>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <img class="service-img" src="https://hizliresim.com/ecc94fi" alt="School Events">
-                <div class="service-info">
-                    <h3>Məktəb və Bağça Tədbirləri</h3>
-                    <p>Kütləvi uşaq qrupları üçün xüsusi hazırlanmış öyrədici və əyləncəli proqramlar.</p>
-                    <a href="contact.html" class="card-link">Sifariş Et ➔</a>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <img class="service-img" src="https://hizliresim.com/m5hsrjw" alt="Special Events">
-                <div class="service-info">
-                    <h3>Xüsusi Tədbirlər</h3>
-                    <p>Korporativ ailə günləri, açılışlar və irimiqyaslı uşaq festivalları.</p>
-                    <a href="contact.html" class="card-link">Sifariş Et ➔</a>
+                <div class="service-details">
+                    <h3>Şou Proqramlar</h3>
+                    <p>Sehrbaz, köpük şousu, kağız şousu və uşaqlar üçün unudulmaz sürprizlərlə dolu master-klasslar və əyləncəli dəqiqələr.</p>
+                    <a href="contact.html" class="service-btn">Sifariş Et</a>
                 </div>
             </div>
 
         </div>
     </div>
 
-    <a href="https://wa.me/994500000000" class="whatsapp-float" target="_blank">➔</a>
+    <a href="https://wa.me/994773282029" class="whatsapp-float" target="_blank">➔</a>
+
 </body>
 </html>
